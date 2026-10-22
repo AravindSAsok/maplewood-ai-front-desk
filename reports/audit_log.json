@@ -1,0 +1,1011 @@
+[
+  {
+    "event": "find_patient",
+    "candidate_id": "P002",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M001"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P002",
+    "count": 2,
+    "message_id": "M001"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P002",
+    "medication": "Lisinopril 10 mg",
+    "status": "eligible",
+    "message_id": "M001"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M001",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M001"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P007",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M002"
+  },
+  {
+    "event": "find_appointments",
+    "patient_id": "P007",
+    "count": 7,
+    "message_id": "M002"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 12,
+    "provider": "KIM",
+    "start_date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "message_id": "M002"
+  },
+  {
+    "event": "reschedule_appointment",
+    "appointment_id": "A035",
+    "old_date": "2026-11-11",
+    "new_date": "2026-11-13",
+    "new_start": "13:00",
+    "message_id": "M002"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M002"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P003",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M003"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M003",
+    "queues": [
+      "clinician_urgent"
+    ],
+    "reason": "Possible medical emergency; immediate human escalation required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M003"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P004",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M004"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P004",
+    "count": 1,
+    "message_id": "M004"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P004",
+    "medication": "Metformin 500 mg",
+    "status": "needs_visit",
+    "message_id": "M004"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M004",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M004"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P006",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M005"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P006",
+    "count": 1,
+    "message_id": "M005"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P006",
+    "medication": "Alprazolam 0.5 mg",
+    "status": "controlled_substance",
+    "message_id": "M005"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M005",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M005"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P005",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M006"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P005",
+    "count": 1,
+    "message_id": "M006"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P005",
+    "medication": "Sertraline 50 mg",
+    "status": "eligible",
+    "message_id": "M006"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M006",
+    "queues": [
+      "provider_refills",
+      "clinician_urgent"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M006"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": null,
+    "verified": false,
+    "verification_reason": "no_matching_record",
+    "message_id": "M007"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M007",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "New-patient booking request for front-desk follow-up."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M007"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P010",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M008"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M008",
+    "queues": [
+      "billing"
+    ],
+    "reason": "Billing question; no billing ledger is supplied to this agent."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M008"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P012",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M009"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P012",
+    "count": 1,
+    "message_id": "M009"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P012",
+    "medication": "Levothyroxine 75 mcg",
+    "status": "eligible",
+    "message_id": "M009"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M009",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M009"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P013",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M010"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 7,
+    "provider": "PATEL",
+    "start_date": "2026-11-17",
+    "end_date": "2026-11-17",
+    "message_id": "M010"
+  },
+  {
+    "event": "book_appointment",
+    "appointment_id": "A171",
+    "patient_id": "P013",
+    "provider": "PATEL",
+    "date": "2026-11-17",
+    "start": "09:00",
+    "end": "09:20",
+    "visit_type": "follow_up",
+    "message_id": "M010"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M010"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P002",
+    "verified": false,
+    "verification_reason": "name_only_unverified",
+    "message_id": "M011"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M011",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "Identity verification required before accessing patient information or acting on the account."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M011"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P014",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M012"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P014",
+    "count": 1,
+    "message_id": "M012"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P014",
+    "medication": "Zolpidem 10 mg",
+    "status": "controlled_substance",
+    "message_id": "M012"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M012",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M012"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P015",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M013"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P015",
+    "count": 1,
+    "message_id": "M013"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P015",
+    "medication": "Omeprazole 20 mg",
+    "status": "too_early",
+    "message_id": "M013"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M013"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P017",
+    "verified": true,
+    "verification_reason": "on_file_authorised_caregiver_contact",
+    "message_id": "M014"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M014",
+    "queues": [
+      "clinician_urgent"
+    ],
+    "reason": "Possible medical emergency; immediate human escalation required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M014"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P009",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M015"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 31,
+    "provider": "KIM",
+    "start_date": "2026-11-09",
+    "end_date": "2026-11-10",
+    "message_id": "M015"
+  },
+  {
+    "event": "book_appointment",
+    "appointment_id": "A172",
+    "patient_id": "P009",
+    "provider": "KIM",
+    "date": "2026-11-09",
+    "start": "09:00",
+    "end": "09:20",
+    "visit_type": "sick_visit",
+    "message_id": "M015"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M015"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P018",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M016"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 20,
+    "provider": "PATEL",
+    "start_date": "2026-11-09",
+    "end_date": "2026-11-10",
+    "message_id": "M016"
+  },
+  {
+    "event": "book_appointment",
+    "appointment_id": "A173",
+    "patient_id": "P018",
+    "provider": "PATEL",
+    "date": "2026-11-09",
+    "start": "10:00",
+    "end": "10:40",
+    "visit_type": "annual_physical",
+    "message_id": "M016"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M016"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P020",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M017"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M017",
+    "queues": [
+      "clinician_urgent"
+    ],
+    "reason": "Possible medical emergency; immediate human escalation required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M017"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P022",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M018"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P022",
+    "count": 1,
+    "message_id": "M018"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P022",
+    "medication": "Insulin glargine 100 units/mL pen",
+    "status": "eligible",
+    "message_id": "M018"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M018",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M018"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P021",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M019"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P021",
+    "count": 1,
+    "message_id": "M019"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P021",
+    "medication": "Oxycodone 5 mg",
+    "status": "controlled_substance",
+    "message_id": "M019"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M019",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M019"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P001",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M020"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P001",
+    "count": 1,
+    "message_id": "M020"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P001",
+    "medication": "Metformin 500 mg",
+    "status": "eligible",
+    "message_id": "M020"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M020",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M020"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P008",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M021"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P008",
+    "count": 1,
+    "message_id": "M021"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P008",
+    "medication": "Amlodipine 5 mg",
+    "status": "no_refills_remaining",
+    "message_id": "M021"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M021",
+    "queues": [
+      "provider_refills"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M021"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P011",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M022"
+  },
+  {
+    "event": "find_appointments",
+    "patient_id": "P011",
+    "count": 9,
+    "message_id": "M022"
+  },
+  {
+    "event": "cancel_appointment",
+    "patient_id": "P011",
+    "cancelled": true,
+    "appointment_id": "A017",
+    "message_id": "M022"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M022"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P019",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M023"
+  },
+  {
+    "event": "get_clinic_info",
+    "message_id": "M023"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M023"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P023",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M024"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 40,
+    "provider": "KIM",
+    "start_date": "2026-11-09",
+    "end_date": "2026-11-13",
+    "message_id": "M024"
+  },
+  {
+    "event": "book_appointment",
+    "appointment_id": "A174",
+    "patient_id": "P023",
+    "provider": "KIM",
+    "date": "2026-11-09",
+    "start": "09:20",
+    "end": "10:00",
+    "visit_type": "annual_physical",
+    "message_id": "M024"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M024"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P024",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M025"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P024",
+    "count": 1,
+    "message_id": "M025"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P024",
+    "medication": "Atorvastatin 40 mg",
+    "status": "eligible",
+    "message_id": "M025"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M025",
+    "queues": [
+      "provider_refills",
+      "billing"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M025"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P016",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M026"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P016",
+    "count": 1,
+    "message_id": "M026"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P016",
+    "medication": "Escitalopram 10 mg",
+    "status": "needs_visit",
+    "message_id": "M026"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M026",
+    "queues": [
+      "provider_refills",
+      "clinician_urgent"
+    ],
+    "reason": "Refill action follows clinic refill policy; provider approval remains required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M026"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": null,
+    "verified": false,
+    "verification_reason": "no_matching_record",
+    "message_id": "M027"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M027",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "Third-party request; sender is not an authorized caregiver on file."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M027"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P025",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M028"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 0,
+    "provider": "OKAFOR",
+    "start_date": "2026-11-18",
+    "end_date": "2026-11-18",
+    "message_id": "M028"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M028",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "No policy-compliant slot was found within the requested window."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M028"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P002",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M029"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 16,
+    "provider": "OKAFOR",
+    "start_date": "2026-11-12",
+    "end_date": "2026-11-12",
+    "message_id": "M029"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M029",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "Requested time is not free; do not silently book a different time."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M029"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P019",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M030"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M030",
+    "queues": [
+      "clinician_routine"
+    ],
+    "reason": "Clinical question or symptom requires human review; no automated clinical advice."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M030"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P007",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M031"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M031"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P010",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M032"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M032",
+    "queues": [
+      "clinician_urgent"
+    ],
+    "reason": "Possible medical emergency; immediate human escalation required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M032"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P012",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M033"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M033",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "Contact information changes require front-desk handling."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M033"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P015",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M034"
+  },
+  {
+    "event": "find_appointments",
+    "patient_id": "P015",
+    "count": 7,
+    "message_id": "M034"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 10,
+    "provider": "PATEL",
+    "start_date": "2026-11-23",
+    "end_date": "2026-11-27",
+    "message_id": "M034"
+  },
+  {
+    "event": "reschedule_appointment",
+    "appointment_id": "A073",
+    "old_date": "2026-11-16",
+    "new_date": "2026-11-23",
+    "new_start": "09:00",
+    "message_id": "M034"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M034"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P022",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M035"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M035",
+    "queues": [
+      "clinician_urgent"
+    ],
+    "reason": "Possible medical emergency; immediate human escalation required."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M035"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P017",
+    "verified": true,
+    "verification_reason": "on_file_authorised_caregiver_contact",
+    "message_id": "M036"
+  },
+  {
+    "event": "read_medications",
+    "patient_id": "P017",
+    "count": 1,
+    "message_id": "M036"
+  },
+  {
+    "event": "check_refill_eligibility",
+    "patient_id": "P017",
+    "medication": "Donepezil 10 mg",
+    "status": "too_early",
+    "message_id": "M036"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M036"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P023",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M037"
+  },
+  {
+    "event": "get_clinic_info",
+    "message_id": "M037"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M037"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": null,
+    "verified": false,
+    "verification_reason": "no_matching_record",
+    "message_id": "M038"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M038"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P014",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M039"
+  },
+  {
+    "event": "find_free_slots",
+    "count": 26,
+    "provider": "OKAFOR",
+    "start_date": "2026-11-09",
+    "end_date": "2026-11-10",
+    "message_id": "M039"
+  },
+  {
+    "event": "book_appointment",
+    "appointment_id": "A175",
+    "patient_id": "P014",
+    "provider": "OKAFOR",
+    "date": "2026-11-09",
+    "start": "11:00",
+    "end": "11:20",
+    "visit_type": "sick_visit",
+    "message_id": "M039"
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M039"
+  },
+  {
+    "event": "find_patient",
+    "candidate_id": "P009",
+    "verified": true,
+    "verification_reason": "on_file_patient_contact",
+    "message_id": "M040"
+  },
+  {
+    "event": "route_message",
+    "message_id": "M040",
+    "queues": [
+      "front_desk"
+    ],
+    "reason": "Records request requires front-desk fulfillment and any required release checks."
+  },
+  {
+    "event": "draft_reply",
+    "message_id": "M040"
+  }
+]

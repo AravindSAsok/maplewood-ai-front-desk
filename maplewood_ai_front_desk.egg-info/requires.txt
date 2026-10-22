@@ -1,0 +1,7 @@
+mcp<2.0.0,>=1.28.0
+
+[llm]
+openai>=2.0.0
+
+[test]
+pytest>=8.0

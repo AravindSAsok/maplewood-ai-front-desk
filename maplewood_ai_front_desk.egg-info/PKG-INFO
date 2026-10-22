@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: maplewood-ai-front-desk
+Version: 0.1.0
+Summary: Safety-first AI front-desk agent prototype for a synthetic clinic inbox
+Requires-Python: >=3.10
+Requires-Dist: mcp<2.0.0,>=1.28.0
+Provides-Extra: llm
+Requires-Dist: openai>=2.0.0; extra == "llm"
+Provides-Extra: test
+Requires-Dist: pytest>=8.0; extra == "test"

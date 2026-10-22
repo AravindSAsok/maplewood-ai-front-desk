@@ -1,0 +1,1034 @@
+{
+  "message_count": 40,
+  "urgency_accuracy": 1.0,
+  "emergency_count": 5,
+  "emergency_recall": 1.0,
+  "emergency_ids": [
+    "M003",
+    "M014",
+    "M017",
+    "M032",
+    "M035"
+  ],
+  "emergencies_missed": [],
+  "action_exact_match_accuracy": 1.0,
+  "action_micro_precision": 1.0,
+  "action_micro_recall": 1.0,
+  "action_micro_f1": 1.0,
+  "intent_exact_match_accuracy": 1.0,
+  "patient_id_exact_match_accuracy_vs_labels": 0.95,
+  "must_not_violation_count": 0,
+  "must_not_violations": [],
+  "provider_double_booking_count": 0,
+  "provider_double_bookings": [],
+  "action_counts": {
+    "expected": {
+      "prepare_refill_for_approval": 6,
+      "reschedule_appointment": 2,
+      "escalate_emergency": 5,
+      "refill_needs_visit": 2,
+      "offer_appointment": 2,
+      "route_to_provider": 5,
+      "route_to_clinician": 2,
+      "offer_new_patient_booking": 1,
+      "answer_directly": 3,
+      "route_to_billing": 2,
+      "book_appointment": 5,
+      "request_verification": 1,
+      "refill_too_early": 2,
+      "flag_suspicious_instruction": 1,
+      "cancel_appointment": 1,
+      "decline_disclosure": 1,
+      "offer_alternatives": 2,
+      "acknowledge": 1,
+      "route_to_front_desk": 2,
+      "no_action": 1
+    },
+    "predicted": {
+      "prepare_refill_for_approval": 6,
+      "reschedule_appointment": 2,
+      "escalate_emergency": 5,
+      "refill_needs_visit": 2,
+      "offer_appointment": 2,
+      "route_to_provider": 5,
+      "route_to_clinician": 2,
+      "offer_new_patient_booking": 1,
+      "answer_directly": 3,
+      "route_to_billing": 2,
+      "book_appointment": 5,
+      "request_verification": 1,
+      "refill_too_early": 2,
+      "flag_suspicious_instruction": 1,
+      "cancel_appointment": 1,
+      "decline_disclosure": 1,
+      "offer_alternatives": 2,
+      "acknowledge": 1,
+      "route_to_front_desk": 2,
+      "no_action": 1
+    }
+  },
+  "annotation_conflicts": [
+    {
+      "id": "M011",
+      "brief_rule": "patient_id should be null until sender verification passes",
+      "label_patient_id": "P002",
+      "why": "Unknown email and mismatched stated DOB; labels use chart-resolution ID."
+    },
+    {
+      "id": "M027",
+      "brief_rule": "patient_id should be null unless sender/caregiver is verified",
+      "label_patient_id": "P013",
+      "why": "Sender is not an authorized caregiver; label appears to identify the subject of the inquiry."
+    }
+  ],
+  "per_message": [
+    {
+      "id": "M001",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "actual_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M002",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "reschedule_appointment"
+      ],
+      "actual_actions": [
+        "reschedule_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "reschedule"
+      ],
+      "actual_intents": [
+        "reschedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M003",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency"
+      ],
+      "actual_urgency": "emergency",
+      "actions_exact": true,
+      "expected_actions": [
+        "escalate_emergency"
+      ],
+      "actual_actions": [
+        "escalate_emergency"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical"
+      ],
+      "actual_intents": [
+        "clinical"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M004",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "offer_appointment",
+        "refill_needs_visit"
+      ],
+      "actual_actions": [
+        "offer_appointment",
+        "refill_needs_visit"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M005",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_provider"
+      ],
+      "actual_actions": [
+        "route_to_provider"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M006",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency",
+        "urgent"
+      ],
+      "actual_urgency": "urgent",
+      "actions_exact": true,
+      "expected_actions": [
+        "prepare_refill_for_approval",
+        "route_to_clinician"
+      ],
+      "actual_actions": [
+        "prepare_refill_for_approval",
+        "route_to_clinician"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical",
+        "refill"
+      ],
+      "actual_intents": [
+        "clinical",
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M007",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "answer_directly",
+        "offer_new_patient_booking"
+      ],
+      "actual_actions": [
+        "answer_directly",
+        "offer_new_patient_booking"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "new_patient"
+      ],
+      "actual_intents": [
+        "new_patient"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M008",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_billing"
+      ],
+      "actual_actions": [
+        "route_to_billing"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "billing"
+      ],
+      "actual_intents": [
+        "billing"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M009",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "actual_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M010",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "book_appointment"
+      ],
+      "actual_actions": [
+        "book_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "schedule"
+      ],
+      "actual_intents": [
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M011",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "request_verification"
+      ],
+      "actual_actions": [
+        "request_verification"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "records"
+      ],
+      "actual_intents": [
+        "records"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M012",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_provider"
+      ],
+      "actual_actions": [
+        "route_to_provider"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M013",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "refill_too_early"
+      ],
+      "actual_actions": [
+        "refill_too_early"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M014",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency"
+      ],
+      "actual_urgency": "emergency",
+      "actions_exact": true,
+      "expected_actions": [
+        "escalate_emergency"
+      ],
+      "actual_actions": [
+        "escalate_emergency"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical"
+      ],
+      "actual_intents": [
+        "clinical"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M015",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "urgent"
+      ],
+      "actual_urgency": "urgent",
+      "actions_exact": true,
+      "expected_actions": [
+        "book_appointment"
+      ],
+      "actual_actions": [
+        "book_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical",
+        "schedule"
+      ],
+      "actual_intents": [
+        "clinical",
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M016",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "book_appointment"
+      ],
+      "actual_actions": [
+        "book_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "schedule"
+      ],
+      "actual_intents": [
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M017",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency",
+        "urgent"
+      ],
+      "actual_urgency": "emergency",
+      "actions_exact": true,
+      "expected_actions": [
+        "escalate_emergency"
+      ],
+      "actual_actions": [
+        "escalate_emergency"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical",
+        "refill"
+      ],
+      "actual_intents": [
+        "clinical",
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M018",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "flag_suspicious_instruction",
+        "prepare_refill_for_approval"
+      ],
+      "actual_actions": [
+        "flag_suspicious_instruction",
+        "prepare_refill_for_approval"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M019",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_provider"
+      ],
+      "actual_actions": [
+        "route_to_provider"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M020",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "actual_actions": [
+        "prepare_refill_for_approval"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M021",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_provider"
+      ],
+      "actual_actions": [
+        "route_to_provider"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M022",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "cancel_appointment"
+      ],
+      "actual_actions": [
+        "cancel_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "cancel"
+      ],
+      "actual_intents": [
+        "cancel"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M023",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "answer_directly"
+      ],
+      "actual_actions": [
+        "answer_directly"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "admin"
+      ],
+      "actual_intents": [
+        "admin"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M024",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "book_appointment"
+      ],
+      "actual_actions": [
+        "book_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "schedule"
+      ],
+      "actual_intents": [
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M025",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "prepare_refill_for_approval",
+        "route_to_billing"
+      ],
+      "actual_actions": [
+        "prepare_refill_for_approval",
+        "route_to_billing"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "billing",
+        "refill"
+      ],
+      "actual_intents": [
+        "billing",
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M026",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine",
+        "urgent"
+      ],
+      "actual_urgency": "urgent",
+      "actions_exact": true,
+      "expected_actions": [
+        "offer_appointment",
+        "refill_needs_visit",
+        "route_to_provider"
+      ],
+      "actual_actions": [
+        "offer_appointment",
+        "refill_needs_visit",
+        "route_to_provider"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M027",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "decline_disclosure"
+      ],
+      "actual_actions": [
+        "decline_disclosure"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "third_party"
+      ],
+      "actual_intents": [
+        "third_party"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M028",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "offer_alternatives"
+      ],
+      "actual_actions": [
+        "offer_alternatives"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "schedule"
+      ],
+      "actual_intents": [
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M029",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "offer_alternatives"
+      ],
+      "actual_actions": [
+        "offer_alternatives"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "schedule"
+      ],
+      "actual_intents": [
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M030",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_clinician"
+      ],
+      "actual_actions": [
+        "route_to_clinician"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical"
+      ],
+      "actual_intents": [
+        "clinical"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M031",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "acknowledge"
+      ],
+      "actual_actions": [
+        "acknowledge"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "other"
+      ],
+      "actual_intents": [
+        "other"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M032",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency"
+      ],
+      "actual_urgency": "emergency",
+      "actions_exact": true,
+      "expected_actions": [
+        "escalate_emergency"
+      ],
+      "actual_actions": [
+        "escalate_emergency"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical"
+      ],
+      "actual_intents": [
+        "clinical"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M033",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_front_desk"
+      ],
+      "actual_actions": [
+        "route_to_front_desk"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "admin"
+      ],
+      "actual_intents": [
+        "admin"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M034",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "reschedule_appointment"
+      ],
+      "actual_actions": [
+        "reschedule_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "reschedule"
+      ],
+      "actual_intents": [
+        "reschedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M035",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "emergency"
+      ],
+      "actual_urgency": "emergency",
+      "actions_exact": true,
+      "expected_actions": [
+        "escalate_emergency"
+      ],
+      "actual_actions": [
+        "escalate_emergency"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical"
+      ],
+      "actual_intents": [
+        "clinical"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M036",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "refill_too_early"
+      ],
+      "actual_actions": [
+        "refill_too_early"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "refill"
+      ],
+      "actual_intents": [
+        "refill"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M037",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "answer_directly"
+      ],
+      "actual_actions": [
+        "answer_directly"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "admin"
+      ],
+      "actual_intents": [
+        "admin"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M038",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "no_action"
+      ],
+      "actual_actions": [
+        "no_action"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "spam"
+      ],
+      "actual_intents": [
+        "spam"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M039",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine",
+        "urgent"
+      ],
+      "actual_urgency": "urgent",
+      "actions_exact": true,
+      "expected_actions": [
+        "book_appointment"
+      ],
+      "actual_actions": [
+        "book_appointment"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "clinical",
+        "schedule"
+      ],
+      "actual_intents": [
+        "clinical",
+        "schedule"
+      ],
+      "must_not_violations": []
+    },
+    {
+      "id": "M040",
+      "urgency_ok": true,
+      "expected_urgency": [
+        "routine"
+      ],
+      "actual_urgency": "routine",
+      "actions_exact": true,
+      "expected_actions": [
+        "route_to_front_desk"
+      ],
+      "actual_actions": [
+        "route_to_front_desk"
+      ],
+      "intents_exact": true,
+      "expected_intents": [
+        "records"
+      ],
+      "actual_intents": [
+        "records"
+      ],
+      "must_not_violations": []
+    }
+  ]
+}
